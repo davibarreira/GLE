@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}	% Para caracteres en español
 \usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
 \usepackage{multirow,booktabs}
+\usepackage{mathtools}
 \usepackage[table]{xcolor}
 \usepackage{fullpage}
 \usepackage{lastpage}
@@ -40,6 +41,7 @@
 \newenvironment{prf}[1][Proof]{\textbf{#1.} }{\qed}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{corollary}{Corollary}[section]
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert} 
 
 \lhead{\includegraphics[height=1.0cm]{../GLE.pdf} GLE}
 \chead{Cauchy-Schwarz Master Class}
@@ -119,6 +121,7 @@ properties:
     \sum^{\infty}_{i=1}b_i^2
     \right).
    \end{equation}
+   \label{CSi}
 \end{theorem}
 
 \begin{shaded}
@@ -191,5 +194,23 @@ properties:
         {\sqrt{\sum^\infty_{i=1}b_i^2}} b_k.
     \end{align*}
 \end{prf}
+\end{shaded}
+
+\newpage
+\begin{theorem}{(Cauchy-Schwarz Inequality with \textit{inner product})}
+   \begin{equation}
+    |\langle \mathbf v, \mathbf w \rangle| \leq
+    \langle \mathbf v, \mathbf v \rangle^{1/2}
+    \langle \mathbf w, \mathbf w \rangle^{1/2} =
+    \norm{\mathbf v}
+    \norm{\mathbf w}
+   \end{equation}
+\end{theorem}
+\begin{shaded}
+    \begin{prf}
+        Just use the exact same proof as Theorem \ref{CSi}, where
+        $\langle \mathbf v, \mathbf w \rangle$ takes the place of $\sum a_i b_i$.
+
+    \end{prf}
 \end{shaded}
 \end{document}
