@@ -69,20 +69,20 @@ properties:
     
    \begin{equation}
     (a_1 b_1 + \dots + a_n b_n)^2 \leq
-    (a_1^2 +  \dots + a_n^2)(b_1^2  + \dots + b_n^2)
+    (a_1^2 +  \dots + a_n^2)(b_1^2  + \dots + b_n^2).
    \end{equation}
 \end{theorem}
 \begin{shaded}
 \begin{prf}
     Using induction.
     \begin{equation*}
-        (a_1 - b_1)^2 \geq 0 \implies a_1^2 + b_1^2 \geq 2 a_1 b_1
+        (a_1 - b_1)^2 \geq 0 \implies a_1^2 + b_1^2 \geq 2 a_1 b_1.
     \end{equation*}
     Suppose that for $n$:
     \begin{equation*}
         \sum^n_{i=1} a_i b_i \leq
         \sqrt{\sum^n_{i=1}a_i^2}
-        \sqrt{\sum^n_{i=1}b_i^2}
+        \sqrt{\sum^n_{i=1}b_i^2}.
     \end{equation*}
     \begin{equation*}
         \sum^n_{i=1} a_i b_i
@@ -90,7 +90,7 @@ properties:
         \leq
         \sqrt{\sum^n_{i=1}a_i^2}
         \sqrt{\sum^n_{i=1}b_i^2}
-        + a_{n+1} b_{n+1}
+        + a_{n+1} b_{n+1}.
     \end{equation*}
 
     Apply Cauchy-Schwarz to $c_1 := \sqrt{\sum^n_{i=1}a_i^2}$, $d_1 := \sqrt{\sum^n_{i=1}b_i^2}$,
@@ -100,7 +100,7 @@ properties:
         \sqrt{c_1 ^2 + c_2^2}
         \sqrt{d_1 ^2 + d_2^2} =
         \sqrt{\sum^n_{i=1}a_i^2 + a_{n+1}^2}
-        \sqrt{\sum^n_{i=1}b_i^2 + b_{n+1}^2}
+        \sqrt{\sum^n_{i=1}b_i^2 + b_{n+1}^2}.
     \end{equation*}
 \end{prf}
 \end{shaded}
@@ -109,15 +109,15 @@ properties:
 \begin{theorem}{(Cauchy-Schwarz Inequality \textit{Infinite} terms)}
    \begin{equation}
     \left( 
-        \sum^{+\infty}_{i=1} a_i b_i
+        \sum^{\infty}_{i=1} a_i b_i
     \right) ^2
     \leq
     \left( 
-        \sum^{+\infty}_{i=1}a_i^2
+        \sum^{\infty}_{i=1}a_i^2
     \right)
     \left( 
-    \sum^{+\infty}_{i=1}b_i^2
-    \right)
+    \sum^{\infty}_{i=1}b_i^2
+    \right).
    \end{equation}
 \end{theorem}
 
@@ -130,47 +130,66 @@ properties:
         \sum^n_{i=1} a_i ^2 +
         \sum^n_{i=1} b_i ^2
          = 
-        \sum^{+\infty}_{i=1} a_i ^2  
+        \sum^{\infty}_{i=1} a_i ^2  
         +
-        \sum^{+\infty}_{i=1} b_i ^2
+        \sum^{\infty}_{i=1} b_i ^2
         \geq
         \lim_{n\to \infty}
         \sum^n_{i=1}2|a_i b_i| =
-        \sum^{+\infty}_{i=1} 2 |a_ib_i|
+        \sum^{\infty}_{i=1} 2 |a_ib_i|.
     \end{equation*}
     Since the inequality above is valid for any $a_i,b_i \in \mathbb R$,
     make:
     \begin{equation*}
-        \hat a_i := \frac{a_i}{\sqrt{\sum^{+\infty}a_i^2}} ,\quad
-        \hat b_i := \frac{b_i}{\sqrt{\sum^{+\infty}b_i^2}}
+        \hat a_i := \frac{a_i}{\sqrt{\sum^{\infty}a_i^2}} ,\quad
+        \hat b_i := \frac{b_i}{\sqrt{\sum^{\infty}b_i^2}}.
     \end{equation*}
     Note that
     \begin{equation*}
-    \sum^{+\infty}_{i=1} \hat a_i ^2 = 
-    \frac{\sum^{+\infty}_{i=1} a_i ^2}{\sum^{+\infty}_{i=1} a_i ^2} = 1
+    \sum^{\infty}_{i=1} \hat a_i ^2 = 
+    \frac{\sum^{\infty}_{i=1} a_i ^2}{\sum^{\infty}_{i=1} a_i ^2} = 1
     , \quad
-    \sum^{+\infty}_{i=1} \hat b_i ^2 = 
-    \frac{\sum^{+\infty}_{i=1} b_i ^2}{\sum^{+\infty}_{i=1} b_i ^2} = 1
+    \sum^{\infty}_{i=1} \hat b_i ^2 = 
+    \frac{\sum^{\infty}_{i=1} b_i ^2}{\sum^{\infty}_{i=1} b_i ^2} = 1.
     \end{equation*}
     Therefore,
     \begin{align*}
         2 =
-        \sum^{+\infty}_{i=1} \hat a_i ^2  
+        \sum^{\infty}_{i=1} \hat a_i ^2  
         +
-        \sum^{+\infty}_{i=1} \hat b_i ^2
+        \sum^{\infty}_{i=1} \hat b_i ^2
         \geq
-        \sum^{+\infty}_{i=1} 2 |\hat a_i \hat b_i|
+        \sum^{\infty}_{i=1} 2 |\hat a_i \hat b_i|
         \implies
         1 \geq 
-        \sum^{+\infty}_{i=1} |\hat a_i \hat b_i|
+        \sum^{\infty}_{i=1} |\hat a_i \hat b_i|
         = 
-        \frac{\sum^{+\infty}_{i=1} a_i b_i}
-        {\sum^{+\infty}_{i=1}a_i^2
-        \sum^{+\infty}_{i=1}b_i^2}
+        \frac{\sum^{\infty}_{i=1} a_i b_i}
+        {\sum^{\infty}_{i=1}a_i^2
+        \sum^{\infty}_{i=1}b_i^2}.
     \end{align*}
-
-    
 \end{prf}
 \end{shaded}
 
+\begin{corollary}{(Sharpness of Cauchy-Schwarz Inequality}
+    The Cauchy-Schwarz inequality is sharp iff
+    $a_k = \lambda b_k$ for every $k \in \mathbb N$, where
+    \begin{equation}
+        \lambda = \frac{\sqrt{\sum^\infty_{i=1}a_i ^2}}
+        {\sqrt{\sum^\infty_{i=1}b_i ^2}}.
+    \end{equation}
+\end{corollary}
+\begin{shaded}
+\begin{prf}
+    Using the previous demonstration, we can see that
+    \begin{align*}
+        (\hat a_k - \hat b_k)^2 = 0 &\iff \hat a_k = \hat b_k \iff
+        \frac{a_k}{\sqrt{\sum^\infty_{i=1} a_i^2}}=
+        \frac{b_k}{\sqrt{\sum^\infty_{i=1} b_i^2}}\\
+        &\iff
+        a_k = \frac{\sqrt{\sum^\infty_{i=1}a_i^2}}
+        {\sqrt{\sum^\infty_{i=1}b_i^2}} b_k.
+    \end{align*}
+\end{prf}
+\end{shaded}
 \end{document}
